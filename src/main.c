@@ -6,14 +6,22 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 13:30:21 by irsander          #+#    #+#             */
-/*   Updated: 2024/06/17 13:34:07 by irsander         ###   ########.fr       */
+/*   Updated: 2024/07/11 23:49:10 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <minishell.h>
+#include "minishell.h"
 
-int main()
+int main(int argc, char **argv)
 {
-    ft_printf("hello");
-    return (0);
+    char    *command_line_input;
+
+    (void)argc;
+    (void)argv;
+    while (1)
+    {
+        command_line_input = readline(PROMPT);
+        ft_printf("%s", command_line_input);
+    }
+    return(0);
 }

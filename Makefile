@@ -6,14 +6,15 @@
 #    By: irsander <irsander@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/17 13:27:31 by irsander          #+#    #+#              #
-#    Updated: 2024/06/20 19:41:02 by irsander         ###   ########.fr        #
+#    Updated: 2024/07/11 23:40:57 by irsander         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= minishell
 
 CC			= cc
-CFLAGS		= -Wall -Wextra -Werror
+CFLAGS		= -Wall -Wextra -Werror -g -fsanitize=address
+LDFLAGS		= -lreadline
 
 LIB_DIR = libft
 INCL = -I ./incl -I $(LIB_DIR)/incl
@@ -31,7 +32,7 @@ LIBFT = $(LIB_DIR)/libft.a
 all: $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT)
-	$(CC) $^ $(INCL) $(CFLAGS) -o $(NAME)
+	$(CC) $^ $(INCL) $(CFLAGS) $(LDFLAGS) -o $(NAME)
 
 $(LIBFT):
 	make -C $(LIB_DIR)
