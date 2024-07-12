@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/11 23:20:09 by irsander          #+#    #+#             */
-/*   Updated: 2024/07/12 00:41:25 by irsander         ###   ########.fr       */
+/*   Updated: 2024/07/12 15:14:06 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@
 
 //Colored prompt:
 #define PROMPT RED "✿ M" GREEN "i" YELLOW "n" BLUE"i" MAGENTA"s" \
-		CYAN"h" RED"e" GREEN "l" YELLOW "l ✿" BLUE " $" RESET " "
+		CYAN"h" RED"e" GREEN "l" YELLOW "l ✿" BLUE " >" RESET " "
 
 // //Basic prompt:
-// # define PROMPT "Minishell: "
+// # define PROMPT "Minishell> "
 
 #endif

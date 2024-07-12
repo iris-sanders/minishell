@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 13:26:32 by irsander          #+#    #+#             */
-/*   Updated: 2024/07/11 23:29:56 by irsander         ###   ########.fr       */
+/*   Updated: 2024/07/12 16:33:13 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,9 @@
 # include "readline/readline.h"
 # include "readline/history.h"
 
-//struct -> what do we need? 
+//iris:
+ 
+//main:
+void	ft_error(char *msg);
 
 #endif

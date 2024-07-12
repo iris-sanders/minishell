@@ -6,7 +6,7 @@
 #    By: irsander <irsander@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/17 13:27:31 by irsander          #+#    #+#              #
-#    Updated: 2024/07/11 23:40:57 by irsander         ###   ########.fr        #
+#    Updated: 2024/07/12 17:43:07 by irsander         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ LIB_DIR = libft
 INCL = -I ./incl -I $(LIB_DIR)/incl
 
 FILES = main.c \
+		lexer/lexer.c \
 
 SRC_DIR = src
 SRC = $(addprefix $(SRC_DIR)/, $(FILES))	
@@ -37,10 +38,12 @@ $(NAME): $(OBJ) $(LIBFT)
 $(LIBFT):
 	make -C $(LIB_DIR)
 
-$(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)
+# $(OBJ_DIR):
+# 	mkdir -p $(OBJ_DIR)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
+$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
+	mkdir -p $(OBJ_DIR)
+	mkdir -p $(OBJ_DIR)/lexer
 	$(CC) -c $< $(INCL) $(CFLAGS) -o $@ 
 
 clean:

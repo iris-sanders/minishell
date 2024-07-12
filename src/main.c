@@ -6,13 +6,13 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 13:30:21 by irsander          #+#    #+#             */
-/*   Updated: 2024/07/12 00:10:30 by irsander         ###   ########.fr       */
+/*   Updated: 2024/07/12 16:32:52 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static void	ft_error(char *msg)
+void	ft_error(char *msg)
 {
 	ft_putstr_fd("Error: ", STDERR_FILENO);
 	ft_putstr_fd(msg, STDERR_FILENO);
@@ -31,6 +31,10 @@ int main(int argc, char **argv)
         input = readline(PROMPT);
         if (input == NULL)
             ft_error("Failed to read input");
+        add_history(input);
+        //lexer(input);
+        //parser
+        //executor
         free(input);
     }
     return(0);
