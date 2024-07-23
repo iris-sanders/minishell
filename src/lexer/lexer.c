@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/12 15:15:42 by irsander          #+#    #+#             */
-/*   Updated: 2024/07/23 15:59:39 by irsander         ###   ########.fr       */
+/*   Updated: 2024/07/23 16:11:44 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static void quote_syntax_check(char *input)
 		{
 			if (quote == '\0') 
 				quote = input[i];
-			else if (quote == '\'' || quote == '\"')
+			else if (quote == input[i])
 				quote = '\0';
 		}
 		i++;
