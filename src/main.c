@@ -6,7 +6,7 @@
 /*   By: irsander <irsander@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 13:30:21 by irsander          #+#    #+#             */
-/*   Updated: 2024/07/12 16:32:52 by irsander         ###   ########.fr       */
+/*   Updated: 2024/07/23 16:00:28 by irsander         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(int argc, char **argv)
         if (input == NULL)
             ft_error("Failed to read input");
         add_history(input);
-        //lexer(input);
+        lexer(input);
         //parser
         //executor
         free(input);
